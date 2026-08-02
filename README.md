@@ -1,67 +1,130 @@
 # Solar Powered Grid Integrated EV Charging Module
-Solar-powered EV charging system with automatic switching between solar and grid power for uninterrupted charging.
-## Overview
-This project presents a Solar Powered Grid Integrated EV Charging Module designed to provide an efficient and reliable charging solution for electric vehicles. The system prioritizes solar energy for charging and automatically switches to the electrical grid whenever solar power is insufficient, ensuring uninterrupted operation.
 
-## Objectives
-- Promote the use of renewable energy for EV charging.
-- Reduce dependence on conventional grid power.
-- Automatically switch between solar and grid sources.
-- Improve charging reliability and energy efficiency.
+An embedded systems project that integrates **solar energy** and the **electrical grid** to provide reliable charging for electric vehicles. The system continuously monitors voltage and current, displays real-time parameters on an LCD, and automatically disconnects the load under abnormal conditions to ensure safe operation.
+
+---
 
 ## Features
-- Solar-powered EV charging.
-- Automatic source switching (Solar/Grid).
-- Battery charging and monitoring.
-- Energy-efficient operation.
-- Safe and reliable charging system.
+
+- Solar-powered EV charging system
+- Automatic switching between solar and grid power
+- Real-time voltage monitoring
+- Real-time current monitoring
+- Overcurrent protection
+- Under-voltage protection
+- Over-voltage protection
+- Relay-based load control
+- Buzzer alarm for fault conditions
+- 16×2 LCD status display
+- Serial monitoring for debugging
+
+---
 
 ## Hardware Components
-- Solar Panel
-- Charge Controller
-- Battery
-- Relay Module
-- Microcontroller (if applicable)
-- Voltage Sensor
-- Current Sensor
-- LCD Display (if used)
-- Power Supply
-- Electric Vehicle Charging Connector
 
-## Software
-- Arduino IDE (if applicable)
+- Arduino Uno
+- ACS712 Current Sensor
+- Voltage Sensor Module
+- DHT11 Temperature & Humidity Sensor
+- Relay Module
+- 16×2 LCD Display
+- Buzzer
+- Solar Panel
+- IoT Module
+- Power Supply
+- Connecting Wires
+
+---
+
+## Software Used
+
+- Arduino IDE
 - Embedded C
-- Proteus (for simulation, if used)
+- LiquidCrystal Library
+- ACS712 Library
+
+---
+
+## Block Diagram
+
+The following block diagram shows the overall architecture of the system.
+
+<p align="center">
+  <img src="images/block_diagram.png" alt="Block Diagram" width="700">
+</p>
+
+---
+
+## Prototype
+
+<p align="center">
+  <img src="images/prototype.jpg" alt="Prototype" width="600">
+</p>
+
+---
+
+## Project Structure
+
+```text
+Solar-Powered-Grid-Integrated-EV-Charging-Module/
+│── README.md
+│── LICENSE
+│
+├── src/
+│   └── Smart_Grid_Load_Monitor.ino
+│
+├── images/
+│   ├── block_diagram.png
+│   ├── prototype.jpg
+│   └── circuit_diagram.png
+│
+├── docs/
+│   └── Project_Presentation.pptx
+│
+└── hardware/
+    ├── Components_List.md
+    └── Pin_Connections.md
+```
+
+---
 
 ## Working Principle
-1. Solar panels generate electrical energy from sunlight.
-2. The generated energy charges the battery through a charge controller.
-3. The charging system continuously monitors the available solar power.
-4. If sufficient solar energy is available, the EV is charged using solar power.
-5. When solar energy becomes insufficient, the system automatically switches to the electrical grid using a relay.
-6. Once solar power is restored, the system switches back to solar charging.
 
-## Project Architecture
-Add your block diagram here.
+1. The solar panel generates electrical energy.
+2. Voltage and current sensors continuously monitor the system.
+3. The Arduino Uno processes all sensor data.
+4. If voltage or current exceeds predefined safety limits, the relay disconnects the load.
+5. A buzzer alerts the user during fault conditions.
+6. System parameters are displayed on the 16×2 LCD.
+7. The IoT module can be used for remote monitoring.
 
-## Circuit Diagram
-Add your circuit diagram here.
+---
 
-## Results
-- Successful automatic switching between solar and grid power.
-- Continuous EV charging without interruption.
-- Improved utilization of renewable energy.
-- Reduced dependency on conventional electricity.
+## Source Code
+
+The complete Arduino source code is available in the `src/` directory.
+
+---
 
 ## Future Improvements
-- IoT-based remote monitoring.
-- Mobile application for charging status.
-- MPPT charge controller integration.
-- AI-based energy management.
-- Fast charging support.
 
-## Team
-B.Tech Electronics and Communication Engineering Project
+- MPPT-based solar charging
+- Mobile application for remote monitoring
+- Cloud-based IoT dashboard
+- Battery State-of-Charge monitoring
+- Fast EV charging support
+- AI-based energy management
+
+---
+
+## Author
+
+**Sriram Chodavaram**
+
+B.Tech – Electronics and Communication Engineering
+
+---
 
 ## License
-This project is for educational purposes.
+
+This project is intended for educational and learning purposes.
