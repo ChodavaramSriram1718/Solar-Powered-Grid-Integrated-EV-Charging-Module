@@ -1,7 +1,5 @@
-# Solar-Powered-Grid-Integrated-EV-Charging-Module
-Solar-powered EV charging system with automatic switching between solar and grid power for uninterrupted charging.
 # Solar Powered Grid Integrated EV Charging Module
-
+Solar-powered EV charging system with automatic switching between solar and grid power for uninterrupted charging.
 ## Overview
 This project presents a Solar Powered Grid Integrated EV Charging Module designed to provide an efficient and reliable charging solution for electric vehicles. The system prioritizes solar energy for charging and automatically switches to the electrical grid whenever solar power is insufficient, ensuring uninterrupted operation.
 
